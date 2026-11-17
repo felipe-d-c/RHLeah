@@ -1,0 +1,353 @@
+{
+ "itens": [
+  {
+   "id": "i1",
+   "clis": [
+    "Treze Tílias"
+   ],
+   "criado": 1,
+   "area": "com",
+   "sub": "Aviso importante",
+   "tit": "Feriado nacional de Finados",
+   "data": "2026-11-02",
+   "imp": true,
+   "txt": "Dia 02/11 é feriado nacional de Finados. Voltamos à programação normal na terça-feira, dia 03/11."
+  },
+  {
+   "id": "i2",
+   "clis": [
+    "Treze Tílias"
+   ],
+   "criado": 2,
+   "area": "cult",
+   "sub": "Frase do mês",
+   "tit": "A transformação que entregamos começa pelas pessoas que fazem parte da nossa história.",
+   "txt": "Léah Transforma"
+  },
+  {
+   "id": "i3",
+   "clis": [
+    "Treze Tílias"
+   ],
+   "criado": 3,
+   "area": "desafio",
+   "mes": "2026-11",
+   "tit": "Desafio da gentileza",
+   "txt": "Todos os dias, faça uma pequena gentileza para alguém da equipe: um elogio sincero, uma ajuda com a tarefa ou um agradecimento.\nNo fim do mês, conte ao RH a gentileza que mais marcou você."
+  },
+  {
+   "id": "i4",
+   "clis": [
+    "Treze Tílias"
+   ],
+   "criado": 4,
+   "area": "nov",
+   "sub": "Novidade",
+   "tit": "Léah Transforma chegou",
+   "txt": "Um espaço para conectar a equipe, compartilhar cultura e desenvolver pessoas. Aqui você encontra comunicados, treinamentos, campanhas, reconhecimentos e muito mais.\nEm breve: fotos e vídeos da nossa equipe."
+  },
+  {
+   "id": "i10",
+   "clis": [
+    "Treze Tílias"
+   ],
+   "criado": 10,
+   "area": "seg",
+   "sub": "Mensagem permanente",
+   "tit": "Respeito não é opcional.",
+   "fixo": true,
+   "txt": "Na Léah, queremos um ambiente em que todas as pessoas sejam respeitadas, ouvidas e valorizadas.\nNão existe espaço para assédio, discriminação ou constrangimento."
+  },
+  {
+   "id": "i11",
+   "clis": [
+    "Treze Tílias"
+   ],
+   "criado": 11,
+   "area": "seg",
+   "sub": "Como pedir ajuda",
+   "tit": "Fale com o RH e use a urna de ideias",
+   "txt": "Você pode falar com o RH sobre assédio, sobrecarga de trabalho, conflitos, pressão excessiva e qualquer situação que esteja afetando o seu bem-estar no trabalho.\n\nTelefone do RH: 499998190601\n\nUrna de ideias: haverá uma urna para ideias e sugestões, e também para quem quer falar algo que não consegue dizer pessoalmente.\n\nComo pedir ajuda:\n1. Se puder, anote o que aconteceu: dia, local e pessoas envolvidas.\n2. Fale com o RH ou deixe o seu recado na urna.\n3. Se não se sentir à vontade, procure alguém de confiança e peça para acompanhar a conversa.\nVocê não precisa passar por isso sozinha."
+  },
+  {
+   "id": "i12",
+   "clis": [
+    "Treze Tílias"
+   ],
+   "criado": 12,
+   "area": "seg",
+   "sub": "Assédio eleitoral",
+   "tit": "Sua escolha política é sua",
+   "imp": true,
+   "txt": "Ninguém pode ser pressionado, ameaçado ou discriminado por sua escolha política.\nSe isso acontecer com você ou com alguém que você conhece, fale com o RH.\nVocê também pode denunciar ao Ministério do Trabalho e Emprego (Disque 158) e ao Ministério Público do Trabalho (site e aplicativo Pardal MPT)."
+  },
+  {
+   "id": "i13",
+   "clis": [
+    "Treze Tílias"
+   ],
+   "criado": 13,
+   "area": "seg",
+   "sub": "Conteúdo educativo",
+   "tit": "Entenda: assédio, discriminação e sobrecarga",
+   "txt": "Assédio moral: condutas repetidas que humilham, constrangem ou desestabilizam alguém no trabalho, como gritos, ironias, isolamento e cobranças abusivas.\nAssédio sexual: insinuações, toques, mensagens ou propostas indesejadas, principalmente quando ligadas a vantagem ou prejuízo no trabalho.\nDiscriminação: tratamento desigual por raça, gênero, orientação sexual, deficiência, religião, idade ou qualquer outra característica.\nSobrecarga: metas, jornadas e tarefas acima do que é possível cumprir com saúde. Peça ajuda cedo."
+  },
+  {
+   "id": "i14",
+   "clis": [
+    "Treze Tílias"
+   ],
+   "criado": 14,
+   "area": "seg",
+   "sub": "PGR em resumo",
+   "tit": "O PGR da Léah em poucas linhas",
+   "txt": "O PGR (Programa de Gerenciamento de Riscos) mapeia os riscos de cada setor e define como evitá-los. Foi feito em abril de 2025, com inspeção no local pela Portalmed SST, e revisado em abril de 2026.\n• Riscos mais comuns: postura por muito tempo, quedas de objetos, contato com agentes biológicos e produtos de limpeza, e laser nos procedimentos.\n• A empresa fornece os EPIs e registra a entrega em ficha. Use sempre e confira o estado e a validade.\n• Metas: mobiliário adequado, extintores livres e inspecionados, limpeza e organização, exames periódicos e PGR revisado todo ano.\n• Em caso de acidente, avise seu superior na hora. A empresa emite a CAT.\nO PGR completo fica à disposição de quem quiser consultar."
+  },
+  {
+   "id": "i15",
+   "clis": [
+    "Treze Tílias"
+   ],
+   "criado": 15,
+   "area": "seg",
+   "sub": "Por setor",
+   "tit": "Riscos e EPIs por setor",
+   "txt": "Estética: contato com agentes biológicos, laser, postura e quedas de objetos. EPIs: luvas, óculos de proteção, calçado de segurança e respirador descartável; óculos contra laser nos procedimentos com laser.\n\nRecepção e administrativo: postura sentada por longos períodos e quedas de objetos. Faça pausas curtas e mantenha o posto organizado.\n\nHigienização: agentes biológicos, produtos químicos, umidade, postura de pé e quedas. EPIs: luvas, respirador, avental e bota impermeáveis, óculos e calçado de segurança."
+  },
+  {
+   "id": "i16",
+   "clis": [
+    "Treze Tílias"
+   ],
+   "criado": 16,
+   "area": "seg",
+   "sub": "Seus direitos e deveres",
+   "tit": "O que você precisa saber sobre segurança no trabalho",
+   "imp": true,
+   "txt": "Você tem direito a:\n• receber informações sobre os riscos do seu trabalho e como preveni-los;\n• apresentar propostas de melhoria;\n• consultar os registros do PGR;\n• interromper na hora sua atividade diante de risco grave e iminente, avisando seu supervisor.\n\nSeus deveres:\n• colaborar com o PGR e seguir as orientações dos treinamentos;\n• informar ao seu superior as ocorrências que possam trazer risco à saúde."
+  },
+  {
+   "id": "i30",
+   "clis": [
+    "Treze Tílias"
+   ],
+   "criado": 30,
+   "area": "nov",
+   "sub": "Novidade",
+   "tit": "Treze Tílias está se transformando",
+   "foto": "fotos/novidade-obras.jpg",
+   "txt": "A nossa unidade de Treze Tílias está passando por mudanças na estrutura. Estamos em obras para receber você ainda melhor: mais conforto, mais beleza e mais cuidado.\nAqui, tudo se transforma, a começar pela nossa casa.",
+   "retrato": true
+  },
+  {
+   "id": "i31",
+   "clis": [
+    "Treze Tílias"
+   ],
+   "criado": 31,
+   "area": "cult",
+   "sub": "Nossa missão",
+   "tit": "Transformar autoestima com verdade, segurança e resultados reais.",
+   "txt": "Transformar a autoestima e a confiança das pessoas, conectando cada cliente à sua melhor versão por meio de procedimentos estéticos seguros, eficientes e de alto resultado, com verdade, cuidado e excelência.\nPara o nosso time, construímos um ambiente de pertencimento, crescimento pessoal e profissional, responsabilidade e compromisso com a entrega."
+  },
+  {
+   "id": "i32",
+   "clis": [
+    "Treze Tílias"
+   ],
+   "criado": 32,
+   "area": "cult",
+   "sub": "Nossa visão",
+   "tit": "Ser a referência mais segura, séria e desejada em estética e franquias.",
+   "txt": "Ser referência nacional em estética e franquias, reconhecida pela segurança, resultados e seriedade, com um ecossistema próprio de tecnologia, produtos, treinamentos e soluções, crescendo de forma sólida, escalável e sustentável."
+  },
+  {
+   "id": "i33",
+   "clis": [
+    "Treze Tílias"
+   ],
+   "criado": 33,
+   "area": "cult",
+   "sub": "Nossos valores",
+   "tit": "O que nos move",
+   "txt": "• Senso de dono\n• Confiança\n• Proatividade\n• Transformação\n• Lealdade"
+  },
+  {
+   "id": "i34",
+   "clis": [
+    "Treze Tílias"
+   ],
+   "criado": 34,
+   "area": "cult",
+   "sub": "Nosso propósito",
+   "tit": "Transforma vidas.",
+   "txt": "Cada atendimento, cada conversa e cada decisão existem para transformar a vida de alguém, a começar por quem faz parte da nossa história."
+  },
+  {
+   "id": "i35",
+   "clis": [
+    "Treze Tílias"
+   ],
+   "criado": 35,
+   "area": "cult",
+   "sub": "Padrão de atendimento",
+   "tit": "Transforma cada atendimento em experiência.",
+   "txt": "Receber com carinho, escutar com atenção, orientar com verdade e entregar com excelência: é assim que o cliente sente a Léah."
+  },
+  {
+   "id": "i36",
+   "clis": [
+    "Treze Tílias"
+   ],
+   "criado": 36,
+   "area": "cult",
+   "sub": "Comportamentos esperados",
+   "tit": "Transforma atitude em exemplo.",
+   "txt": "Respeito, pontualidade, empatia e cuidado com o outro no dia a dia: o jeito Léah de agir inspira quem está ao redor."
+  },
+  {
+   "id": "i37",
+   "clis": [
+    "Treze Tílias"
+   ],
+   "criado": 37,
+   "area": "cult",
+   "sub": "Postura profissional",
+   "tit": "Transforma preparo em confiança.",
+   "txt": "Aparência cuidada, comunicação clara, segurança no que faz e ética: a confiança do cliente começa na nossa postura."
+  },
+  {
+   "id": "i38",
+   "clis": [
+    "Treze Tílias"
+   ],
+   "criado": 38,
+   "area": "cult",
+   "sub": "Trabalho em equipe",
+   "tit": "Transforma pessoas em time.",
+   "txt": "Ajudar, somar e celebrar juntas: o resultado da Léah é construído por todas nós."
+  },
+  {
+   "id": "i39",
+   "clis": [
+    "Treze Tílias"
+   ],
+   "criado": 39,
+   "area": "cult",
+   "sub": "Responsabilidade e comprometimento",
+   "tit": "Transforma compromisso em resultado.",
+   "txt": "Cumprir o combinado, cuidar do que é seu e entregar com qualidade: é assim que a gente cresce de forma sólida."
+  },
+  {
+   "id": "i50",
+   "clis": [
+    "Treze Tílias"
+   ],
+   "criado": 50,
+   "area": "cargo",
+   "sub": "Função",
+   "tit": "Analista de RH",
+   "txt": "Executa serviços de apoio nas áreas de recursos humanos, administração e finanças, atende fornecedores e clientes, fornece e recebe informações sobre produtos e serviços e trata documentos e procedimentos administrativos do RH.\nJornada: 44 horas semanais."
+  },
+  {
+   "id": "i51",
+   "clis": [
+    "Treze Tílias"
+   ],
+   "criado": 51,
+   "area": "cargo",
+   "sub": "Função",
+   "tit": "Assistente administrativo financeiro",
+   "txt": "Realiza cobranças e renegocia dívidas, efetua negativações no banco e na CDL, lança dados no sistema Belle Software, calcula e comunica cancelamentos aos clientes, baixa títulos no sistema bancário, acompanha inadimplências, auxilia em contas a receber, emite notas fiscais de serviços prestados e lança títulos recebidos.\nJornada: 44 horas semanais."
+  },
+  {
+   "id": "i52",
+   "clis": [
+    "Treze Tílias"
+   ],
+   "criado": 52,
+   "area": "cargo",
+   "sub": "Função",
+   "tit": "Auxiliar comercial",
+   "txt": "Recebe e atende clientes e fornecedores, presta atendimento e informações, identifica necessidades, direciona às pessoas responsáveis, trata documentos e informações, reserva solicitações, agenda serviços e organiza informações e o planejamento do dia a dia.\nJornada: 44 horas semanais."
+  },
+  {
+   "id": "i53",
+   "clis": [
+    "Treze Tílias"
+   ],
+   "criado": 53,
+   "area": "cargo",
+   "sub": "Função",
+   "tit": "Assistente de relacionamento",
+   "txt": "Recepciona clientes e futuros clientes, identifica e compreende suas necessidades para dar as informações adequadas ou encaminhá-los aos setores ou pessoas responsáveis, e auxilia nas vendas e na prospecção de novos clientes.\nJornada: 44 horas semanais."
+  },
+  {
+   "id": "i54",
+   "clis": [
+    "Treze Tílias"
+   ],
+   "criado": 54,
+   "area": "cargo",
+   "sub": "Função",
+   "tit": "Auxiliar de estética",
+   "txt": "Auxilia nos procedimentos estéticos faciais e corporais, nos controles administrativos relacionados à estética e na gestão de documentos conforme os procedimentos estabelecidos.\nJornada: 44 horas semanais."
+  },
+  {
+   "id": "i55",
+   "clis": [
+    "Treze Tílias"
+   ],
+   "criado": 55,
+   "area": "cargo",
+   "sub": "Função",
+   "tit": "Esteticista",
+   "txt": "Realiza procedimentos estéticos faciais e corporais, faz os controles administrativos da estética, gerencia documentos, avalia clientes e indica tratamentos adequados, com recomendações personalizadas.\nJornada: 44 horas semanais."
+  },
+  {
+   "id": "i56",
+   "clis": [
+    "Treze Tílias"
+   ],
+   "criado": 56,
+   "area": "cargo",
+   "sub": "Função",
+   "tit": "Técnica em estética",
+   "txt": "Realiza procedimentos estéticos faciais e corporais, faz os controles administrativos da estética, gerencia documentos, avalia clientes e indica tratamentos adequados, com recomendações personalizadas.\nJornada: 44 horas semanais."
+  },
+  {
+   "id": "i57",
+   "clis": [
+    "Treze Tílias"
+   ],
+   "criado": 57,
+   "area": "cargo",
+   "sub": "Função",
+   "tit": "Auxiliar de limpeza",
+   "txt": "Conserva, limpa e higieniza ambientes, setores e postos de trabalho, faz a coleta de lixo, varrição, lavação, limpeza de vidros, janelas, pisos, paredes, mobiliários e acessórios e organiza setores e ambientes.\nJornada: 22 horas semanais."
+  }
+ ],
+ "equipe": [
+  {
+   "id": "e1",
+   "nome": "Kemely Alves Wilbert",
+   "cli": "Treze Tílias",
+   "md": "04-26",
+   "adm": "2026-05-18"
+  },
+  {
+   "id": "e2",
+   "nome": "Denise do Prado",
+   "cli": "Treze Tílias",
+   "md": "04-03",
+   "adm": "2026-01-08"
+  },
+  {
+   "id": "e3",
+   "nome": "Yasmin Figueiredo Rovaris",
+   "cli": "Treze Tílias",
+   "md": "03-03",
+   "adm": "2026-10-20"
+  }
+ ]
+}
