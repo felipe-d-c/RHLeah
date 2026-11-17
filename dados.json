@@ -325,6 +325,17 @@
    "sub": "Função",
    "tit": "Auxiliar de limpeza",
    "txt": "Conserva, limpa e higieniza ambientes, setores e postos de trabalho, faz a coleta de lixo, varrição, lavação, limpeza de vidros, janelas, pisos, paredes, mobiliários e acessórios e organiza setores e ambientes.\nJornada: 22 horas semanais."
+  },
+  {
+   "id": "i17949160919e9b",
+   "criado": 1794916091361,
+   "area": "com",
+   "sub": "Aviso importante",
+   "tit": "Comunicado RH: Feriado Dia da Consciência Negra",
+   "txt": "Prezadas colaboradoras, gostaríamos de lembrar que na próxima sexta-feira dia 20 de novembro, celebraremos o Dia da Consciência Negra. Este é um momento importante para refletirmos sobre a importância da igualdade racial e o legado da cultura afro-brasileira. A Léah Estética valoriza a diversidade e o respeito entre todos. Desejamos a todos um dia de reflexão e conscientização.",
+   "data": "2026-11-17",
+   "imp": true,
+   "clis": []
   }
  ],
  "equipe": [
