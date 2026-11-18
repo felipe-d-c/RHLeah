@@ -34,3 +34,8 @@ Sem GitHub configurado, ele grava `dados.json` e `fotos/` na própria pasta.
 - **Calendário**: monta sozinho a partir das datas dos itens, aniversários, feriados e campanhas.
 - Tudo é **rascunho** até clicar em *Publicar*. A IA nunca publica sozinha.
 - Campanhas do mês (Outubro Rosa etc.) e datas especiais continuam no `index.html` (variáveis `CAMP` e `ESP`).
+
+## Animações e privacidade (novo)
+- O site tem animações ao rolar (revelação dos blocos, parallax nas fotos, faixa de avisos, menu que acompanha a seção, contadores, "Ler mais", confetes ao clicar na logo ou na aniversariante). Quem tem "reduzir movimento" ligado no aparelho vê tudo sem animação.
+- A lista "Nossa equipe" foi removida da página. Só aparecem: aniversariantes (do mês e no calendário) e "Tempo de Léah", que mostra apenas quem tem 1 ano ou mais de casa.
+- Atenção: o `dados.json` continua público no GitHub Pages (a lista de nomes está nele, só não é exibida na página).
