@@ -266,6 +266,8 @@ html{scroll-behavior:auto}
 
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.tick{overflow-x:auto}.zm .foto{transform:none}.bg i{translate:none}}
 
+.rkp{flex:none;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font:900 14px Nunito,system-ui,sans-serif;background:var(--rose2);color:var(--rosed)}.rkp.p1{background:var(--gold2);color:var(--goldd)}
+.rkf{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin-top:8px;font:600 12px Nunito,system-ui,sans-serif;color:var(--mut)}.rkf .btn{margin:0;padding:6px 10px;font-size:11px}.rkf .btn[disabled]{opacity:.6;cursor:default}
 </style>
 </head>
 <body>
@@ -301,7 +303,7 @@ var CULT_TOPICS=['Nossa missão','Nossa visão','Nossos valores','Nosso propósi
 var L=[];
 var EQ=[];
 var MID='',MA='';
-var fc='Todas',mo=0,selDay='',cfDone=false;
+var fc='Todas',mo=0,selDay='',cfDone=false,RK=null,RKMSG='';
 var $=function(i){return document.getElementById(i)};
 var esc=function(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
 function nz(x){return String(x||'').trim().toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'')}
@@ -353,6 +355,12 @@ function espHtml(){var md=HJ.slice(5),l=ESP.filter(function(x){return x[0]===md}
  return l.map(function(x){return'<div class="esp"><div class="st">★</div><div><b>Edição extra: hoje é '+esc(x[1])+'!</b>Parabéns e obrigada por transformar com a gente.'+(x[2]?'<br>Temos vagas abertas: '+esc(x[2])+'. Fale com o RH.':'')+'</div></div>'}).join('')}
 function anivCard(E){var mm=HJ.slice(5,7),hd=HJ.slice(5),nome=MESES[hoje.getMonth()],an=E.filter(function(p){return p.md&&p.md.slice(0,2)===mm}).sort(function(a,b){return a.md<b.md?-1:1});
  return'<div class="card" id="aniv"><h3>Aniversariantes de '+nome+'</h3>'+(an.length?an.map(function(p){var t=p.md===hd;return'<div class="row pr'+(t?' hat1':'')+'">'+av(p,t)+'<div class="who">'+esc(p.nome)+'<small>'+esc(p.cli)+'</small></div><b>'+(t?'Parabéns, é hoje!':'dia '+p.md.slice(3))+'</b></div>'}).join(''):emp('Nenhum aniversariante neste mês.'))+(an.some(function(p){return p.md===hd})?'<button class="btn" data-cf="1">Soltar confetes</button>':'')+'</div>'}
+function rkQuando(s){var m=String(s||'').match(/^(\d{4})-(\d{2})-(\d{2})[ T](\d{2}):(\d{2})/);return m?m[3]+'/'+m[2]+' às '+m[4]+':'+m[5]:''}
+function rankCard(){var ym=HJ.slice(0,7),ok=RK&&RK.mes===ym&&RK.top&&RK.top.length,h='<div class="card" id="rk"><h3>Top 5 vendedoras de '+MESES[hoje.getMonth()]+'</h3>';
+ h+=ok?RK.top.slice(0,5).map(function(t){return'<div class="row pr"><div class="rkp'+(t.pos===1?' p1':'')+'">'+t.pos+'º</div><div class="who">'+esc(t.nome)+'<small>'+esc(t.cli)+'</small></div></div>'}).join(''):emp(RK&&RK.mes!==ym?'Um novo mês começou. O ranking aparece após a atualização desta noite.':'O ranking aparece aqui assim que for calculado.');
+ return h+'<div class="rkf"><span>'+(RK&&RK.atualizado_em?'Atualizado em '+esc(rkQuando(RK.atualizado_em)):'')+(RKMSG?' · '+esc(RKMSG):'')+'</span><button type="button" class="btn" data-rk="1">Atualizar</button></div></div>'}
+function atualizaRank(b){b.disabled=true;b.textContent='Atualizando…';var antes=RK&&RK.atualizado_em;
+ fetch('ranking.json?v='+Date.now(),{cache:'no-store'}).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(j){RK=j;RKMSG=(antes&&j.atualizado_em===antes)?'já está na versão mais recente':''}).catch(function(){RKMSG='não foi possível atualizar agora'}).then(function(){var el=$('rk');if(el)el.outerHTML=rankCard()})}
 function mesesCasa(adm){var a=P(adm),m=(hoje.getFullYear()-a.getFullYear())*12+hoje.getMonth()-a.getMonth();if(hoje.getDate()<a.getDate())m--;return m}
 function tempoHtml(s){return esc(s).replace(/\d+/g,'<span class="cu" data-to="$&">$&</span>')}
 function tempoCard(E){var mm=HJ.slice(5,7),ca=E.filter(function(p){return p.adm&&mesesCasa(p.adm)>=12}).sort(function(a,b){return a.adm<b.adm?-1:1});
@@ -406,20 +414,21 @@ function render(){
  $('camp').innerHTML=campCard();$('esp').innerHTML=espHtml();
  var A=L.filter(function(a){return!cl||clis(a).indexOf(cl)>-1}),E=EQ.slice(),M=pickM(A);MID=M?M.id:'';MA=M?ar(M):'';
  var fr=A.filter(function(a){return ar(a)==='cult'&&a.sub==='Frase do mês'}).sort(rec)[0];
- var h='<div class="front"><div class="fmain">'+mchHtml(M)+secHtml('nov',A,E,0)+'</div><aside class="fside">'+(fr?'<div class="quote">“'+esc(fr.tit)+'”'+(fr.txt?'<small>'+esc(fr.txt)+'</small>':'')+'</div>':'')+anivCard(E)+desafioCard()+'</aside></div>'+
+ var h='<div class="front"><div class="fmain">'+mchHtml(M)+secHtml('nov',A,E,0)+'</div><aside class="fside">'+(fr?'<div class="quote">“'+esc(fr.tit)+'”'+(fr.txt?'<small>'+esc(fr.txt)+'</small>':'')+'</div>':'')+anivCard(E)+rankCard()+desafioCard()+'</aside></div>'+
   '<div class="row3">'+secHtml('com',A,E,0)+secHtml('trein',A,E,0)+secHtml('evt',A,E,0)+'</div>'+
   '<div class="row2">'+calSec(A,E)+'<div><section style="margin-top:28px"><h2>Quem é Léah</h2><p class="sub">Tempo de casa e reconhecimentos</p>'+tempoCard(E)+'</section>'+secHtml('rec',A,E,0)+'</div></div>'+
   '<div class="segcols">'+secHtml('seg',A,E,0)+'</div>'+
   '<div class="row3">'+secHtml('cult',A,E,0)+secHtml('pol',A,E,0)+secHtml('info',A,E,0)+'</div>'+'<div class="segcols">'+secHtml('cargo',A,E,0)+'</div>';
  $('app').innerHTML=h;curA=A;curE=E;buildTick(A,E);fxRender();
  if(!cfDone&&E.some(function(p){return p.md===HJ.slice(5)})){cfDone=true;setTimeout(confetti,400)}}
-document.addEventListener('click',function(e){var t=e.target.closest?e.target.closest('[data-c],[data-go],[data-cf],[data-nav],[data-day],[data-more]'):null;if(!t)return;var d=t.dataset;
+document.addEventListener('click',function(e){var t=e.target.closest?e.target.closest('[data-c],[data-go],[data-cf],[data-nav],[data-day],[data-more],[data-rk]'):null;if(!t)return;var d=t.dataset;
  if(d.c){fc=d.c;render()}
  else if(d.go){var s=$(d.go);if(s)s.scrollIntoView({behavior:'smooth'})}
  else if(d.cf){confetti()}
  else if(d.nav){mo+=+d.nav;selDay='';calRefresh(true,'[data-nav="'+d.nav+'"]')}
  else if(d.day!==undefined){var nd0=d.day;selDay=d.day===selDay?'':d.day;calRefresh(false,'[data-day="'+nd0+'"]')}
- else if(d.more!==undefined){toggleMore(t)}});
+ else if(d.more!==undefined){toggleMore(t)}
+ else if(d.rk!==undefined){atualizaRank(t)}});
 
 /* ================= MOTOR DE ANIMAÇÃO ================= */
 var RM=!!window.RM,ANIM=!RM,curA=null,curE=null,io=null,Z=[],act='',firstR=true,TB=document.querySelector('.titlebar'),BGI=document.querySelector('.bg'),TTL=document.querySelector('.ttl'),PROG=$('prog'),BTT=$('btt'),BTTP=BTT.querySelector('.pg');
@@ -475,8 +484,9 @@ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){if(
 
 window.addEventListener('hashchange',render);
 fetch('dados.json?v='+Date.now()).then(function(r){return r.json()}).then(function(d){
- L=d.itens||[];EQ=d.equipe||[];render()
-}).catch(function(){$('app').innerHTML='<p class="empty">Não foi possível carregar os dados agora. Tente novamente em instantes.</p>'});
+ L=d.itens||[];EQ=d.equipe||[];
+ return fetch('ranking.json?v='+Date.now()).then(function(r){return r.ok?r.json():null}).catch(function(){return null})
+}).then(function(rk){RK=rk;render()}).catch(function(){$('app').innerHTML='<p class="empty">Não foi possível carregar os dados agora. Tente novamente em instantes.</p>'});
 
 </script>
 </body>

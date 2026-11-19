@@ -446,6 +446,15 @@ with st.sidebar:
         for k in [k for k in st.session_state if str(k).startswith("ed_") or k == "equipe_ed"]:
             del st.session_state[k]
         st.rerun()
+    REL_TOKEN, REL_REPO = seg("RELATORIO_TOKEN"), seg("RELATORIO_REPO")
+    if REL_TOKEN and REL_REPO:
+        st.divider()
+        if st.button("🔄 Atualizar ranking agora"):
+            try:
+                core.atualizar_ranking(REL_TOKEN, REL_REPO)
+                st.success("Pedido enviado! O ranking novo aparece no site em 5 a 10 minutos.")
+            except Exception as e:
+                st.error(f"Não foi possível atualizar: {e}")
     if SITE_URL:
         st.link_button("Abrir o site", SITE_URL)
     if "gem" in st.session_state:

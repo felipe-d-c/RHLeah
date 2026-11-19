@@ -39,3 +39,11 @@ Sem GitHub configurado, ele grava `dados.json` e `fotos/` na própria pasta.
 - O site tem animações ao rolar (revelação dos blocos, parallax nas fotos, faixa de avisos, menu que acompanha a seção, contadores, "Ler mais", confetes ao clicar na logo ou na aniversariante). Quem tem "reduzir movimento" ligado no aparelho vê tudo sem animação.
 - A lista "Nossa equipe" foi removida da página. Só aparecem: aniversariantes (do mês e no calendário) e "Tempo de Léah", que mostra apenas quem tem 1 ano ou mais de casa.
 - Atenção: o `dados.json` continua público no GitHub Pages (a lista de nomes está nele, só não é exibida na página).
+
+## Top 5 vendedoras (novo)
+- O site mostra o card **Top 5 vendedoras do mês** (rede toda, sem a Rota) lendo `ranking.json`, que fica na raiz deste repositório.
+- Quem gera o `ranking.json` é o GitHub Action do repositório `relatoriocomercial` (`ranking.py`), todo dia de madrugada, e ele grava o arquivo aqui.
+  No repositório do relatório crie os Secrets `SITE_REPO` (ex.: `usuario/RHLeah`) e `SITE_REPO_TOKEN` (token fine-grained só deste repositório, *Contents: Read and write*).
+- O botão **Atualizar** do site só recarrega o `ranking.json`. Para recalcular agora, use **🔄 Atualizar ranking agora** no editor:
+  adicione nos Secrets do Streamlit `RELATORIO_REPO` (ex.: `usuario/relatoriocomercial`) e `RELATORIO_TOKEN` (token fine-grained do repositório do relatório, *Actions: Read and write*).
+- Para tirar alguém do ranking (call center, financeiro), edite `EXCLUIR_NOMES` em `ranking.py`.

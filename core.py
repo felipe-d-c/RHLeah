@@ -268,3 +268,13 @@ def carregar_remoto(gh: GitHub | None) -> dict:
         return carregar_local()
     b, _ = gh.ler("dados.json")
     return validar(json.loads(b.decode("utf-8"))) if b else carregar_local()
+
+
+def atualizar_ranking(token: str, repo: str, workflow: str = "precache.yml", ref: str = "main") -> None:
+    """Dispara o GitHub Action do repositório do relatório comercial (baixa da Belle e publica o ranking.json)."""
+    r = requests.post(f"https://api.github.com/repos/{repo}/actions/workflows/{workflow}/dispatches",
+                      headers={"Authorization": f"Bearer {token}", "Accept": "application/vnd.github+json",
+                               "X-GitHub-Api-Version": "2022-11-28"},
+                      json={"ref": ref}, timeout=30)
+    if r.status_code != 204:
+        raise RuntimeError(f"GitHub respondeu {r.status_code}: {r.text[:200]}")
