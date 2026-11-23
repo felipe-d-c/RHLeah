@@ -340,8 +340,17 @@
    "sub": "Novidade",
    "tit": "Treze Tílias está se transformando",
    "txt": "A nossa unidade de Treze Tílias está passando por mudanças na estrutura. Estamos em obras para receber você ainda melhor: mais conforto, mais beleza e mais cuidado.\nAqui, tudo se transforma, a começar pela nossa casa.",
-   "clis": [],
-   "foto": "fotos/i1795436025b8cd-1795436323.jpg"
+   "clis": []
+  },
+  {
+   "id": "i17954363378a1f",
+   "criado": 1795436337729,
+   "area": "nov",
+   "sub": "Novidade",
+   "tit": "Léah Transforma chegou",
+   "txt": "Um espaço para conectar a equipe, compartilhar cultura e desenvolver pessoas. Aqui você encontra comunicados, treinamentos, campanhas, reconhecimentos e muito mais.\nEm breve: fotos e vídeos da nossa equipe.",
+   "video": "videos/i4-1795434238.mp4",
+   "clis": []
   }
  ],
  "equipe": [
