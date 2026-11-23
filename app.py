@@ -228,6 +228,13 @@ def campos(p, area, it):
     if cfg.get("link"):
         init(f"{p}_link", it.get("link", ""))
         v["link"] = st.text_input("Link (https://… ou politicas/arquivo.pdf)", key=f"{p}_link")
+        parq = st.file_uploader(f"Ou envie o PDF (até {core.PDF_MAX_MB} MB)", type=["pdf"], key=f"{p}_pdfarq")
+        if parq is not None and parq.size > core.PDF_MAX_MB * 1024 * 1024:
+            st.error(f"PDF com {parq.size / 1048576:.0f} MB. O limite é {core.PDF_MAX_MB} MB: comprima o PDF e envie de novo.")
+            parq = None
+        v["_pdfarq"] = parq
+        if parq is not None:
+            st.caption("O PDF substitui o link acima ao salvar e publicar.")
     if cfg.get("video"):
         init(f"{p}_video", it.get("video", ""))
         v["video"] = st.text_input("Vídeo (link do YouTube ou .mp4)", key=f"{p}_video")
@@ -302,6 +309,12 @@ def aplicar(item, v, arq, area):
         caminho = f"videos/{item['id']}-{int(time.time())}.{ext}"
         st.session_state.fotos_novas[caminho] = varq.getvalue()
         item["video"] = caminho
+    parq = v.get("_pdfarq")
+    if parq is not None:
+        base = re.sub(r"[^a-z0-9]+", "-", os.path.splitext(parq.name)[0].lower()).strip("-") or item["id"]
+        caminho = f"politicas/{base}-{int(time.time())}.pdf"
+        st.session_state.fotos_novas[caminho] = parq.getvalue()
+        item["link"] = caminho
     if area == "desafio":  # um desafio por mês
         st.session_state.dados["itens"] = [
             i for i in st.session_state.dados["itens"]

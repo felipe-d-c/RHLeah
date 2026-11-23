@@ -177,6 +177,7 @@ def ordenar(d: dict) -> dict:
 
 
 # ------------------------------------------------------------------ fotos
+PDF_MAX_MB = 25
 VIDEO_MAX_MB = 40  # limite do envio pela API do GitHub (base64 aumenta ~33%)
 
 def reduzir_foto(dados: bytes, lado_max: int = 1600, qualidade: int = 82) -> bytes:
@@ -260,7 +261,7 @@ def publicar(dados: dict, fotos_novas: dict[str, bytes], gh: GitHub | None, msg:
         (BASE / "dados.json").write_bytes(conteudo)
         return "local"
     for caminho, b in fotos_novas.items():  # fotos primeiro, para o site nunca apontar pra foto inexistente
-        gh.gravar(caminho, b, f"{msg} ({'vídeo' if caminho.startswith('videos/') else 'foto'})")
+        gh.gravar(caminho, b, f"{msg} ({'vídeo' if caminho.startswith('videos/') else 'PDF' if caminho.endswith('.pdf') else 'foto'})")
     gh.gravar("dados.json", conteudo, msg)
     return "github"
 
