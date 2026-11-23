@@ -36,19 +36,6 @@
    "txt": "Todos os dias, faça uma pequena gentileza para alguém da equipe: um elogio sincero, uma ajuda com a tarefa ou um agradecimento.\nNo fim do mês, conte ao RH a gentileza que mais marcou você."
   },
   {
-   "id": "i4",
-   "clis": [
-    "Treze Tílias"
-   ],
-   "criado": 4,
-   "area": "nov",
-   "sub": "Novidade",
-   "tit": "Léah Transforma chegou",
-   "txt": "Um espaço para conectar a equipe, compartilhar cultura e desenvolver pessoas. Aqui você encontra comunicados, treinamentos, campanhas, reconhecimentos e muito mais.\nEm breve: fotos e vídeos da nossa equipe.",
-   "video": "videos/i4-1795434238.mp4",
-   "foto": "fotos/i4-1795434238.jpg"
-  },
-  {
    "id": "i10",
    "clis": [
     "Treze Tílias"
@@ -353,6 +340,16 @@
    "sub": "Novidade",
    "tit": "Treze Tílias está se transformando",
    "txt": "A nossa unidade de Treze Tílias está passando por mudanças na estrutura. Estamos em obras para receber você ainda melhor: mais conforto, mais beleza e mais cuidado.\nAqui, tudo se transforma, a começar pela nossa casa.",
+   "clis": []
+  },
+  {
+   "id": "i1795436121d174",
+   "criado": 1795436121402,
+   "area": "nov",
+   "sub": "Novidade",
+   "tit": "Léah Transforma chegou",
+   "txt": "Um espaço para conectar a equipe, compartilhar cultura e desenvolver pessoas. Aqui você encontra comunicados, treinamentos, campanhas, reconhecimentos e muito mais.\nEm breve: fotos e vídeos da nossa equipe.",
+   "video": "videos/i4-1795434238.mp4",
    "clis": []
   }
  ],
