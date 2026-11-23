@@ -402,7 +402,7 @@ function calSec(A,E){
  '<div class="calwrap"><div><div class="cal">'+g+'</div><div class="leg">'+Object.keys(K).map(function(k){return'<span style="--c:'+K[k][0]+'">'+K[k][1]+'</span>'}).join('')+'</div></div><div class="evl">'+(selDay?'<button class="cbtn" data-day="" style="margin-bottom:6px">Ver o mês todo</button>':'')+list+'</div></div></div></section>'}
 function bodyOf(k,A,E){
  var S=A.filter(function(a){return ar(a)===k&&a.id!==MID});
- if(k==='nov'){S.sort(rec);if(!S.length)return'<div class="ph">Em breve: fotos e vídeos da nossa equipe</div>';return'<div class="nvh">'+S.map(card).join('')+'<div class="ph">Seu espaço para fotos e vídeos da Léah</div></div>'}
+ if(k==='nov'){S.sort(rec);if(!S.length)return'<div class="ph">Em breve: fotos e vídeos da nossa equipe</div>';return'<div class="nvh">'+S.map(card).join('')+'</div>'}
  if(k==='com'){S.sort(function(a,b){return(b.imp?1:0)-(a.imp?1:0)||rec(a,b)});return S.length?grid(S.map(card)):emp(MA==='com'?'Veja a manchete acima.':'Nenhum comunicado por enquanto.')}
  if(k==='trein'){var up=S.filter(function(a){return a.data&&a.data>=HJ}).sort(function(a,b){return a.data<b.data?-1:1}),pa=S.filter(function(a){return a.data&&a.data<HJ}).sort(function(a,b){return a.data<b.data?1:-1}),un=S.filter(function(a){return!a.data}).sort(rec),h='<div class="know"><b>Conhecimento Léah</b><br>Pequenas doses de aprendizado para elevar o seu dia a dia: dicas de atendimento, postura profissional, comunicação e experiência do cliente.</div>';
   h+=up.length?grid(up.map(card)):emp('Nenhum treinamento marcado por enquanto.');if(un.length)h+='<p class="sub" style="margin-top:12px">Dicas e campanhas</p>'+grid(un.map(card));
