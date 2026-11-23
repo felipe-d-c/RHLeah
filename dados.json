@@ -129,19 +129,6 @@
    "txt": "Você tem direito a:\n• receber informações sobre os riscos do seu trabalho e como preveni-los;\n• apresentar propostas de melhoria;\n• consultar os registros do PGR;\n• interromper na hora sua atividade diante de risco grave e iminente, avisando seu supervisor.\n\nSeus deveres:\n• colaborar com o PGR e seguir as orientações dos treinamentos;\n• informar ao seu superior as ocorrências que possam trazer risco à saúde."
   },
   {
-   "id": "i30",
-   "clis": [
-    "Treze Tílias"
-   ],
-   "criado": 30,
-   "area": "nov",
-   "sub": "Novidade",
-   "tit": "Treze Tílias está se transformando",
-   "foto": "fotos/i30-1794910708.jpg",
-   "txt": "A nossa unidade de Treze Tílias está passando por mudanças na estrutura. Estamos em obras para receber você ainda melhor: mais conforto, mais beleza e mais cuidado.\nAqui, tudo se transforma, a começar pela nossa casa.",
-   "retrato": true
-  },
-  {
    "id": "i31",
    "clis": [
     "Treze Tílias"
@@ -358,6 +345,15 @@
    "link": "politicas/Adiantamento.pdf",
    "clis": [],
    "txt": ""
+  },
+  {
+   "id": "i1795436025b8cd",
+   "criado": 1795436025869,
+   "area": "nov",
+   "sub": "Novidade",
+   "tit": "Treze Tílias está se transformando",
+   "txt": "A nossa unidade de Treze Tílias está passando por mudanças na estrutura. Estamos em obras para receber você ainda melhor: mais conforto, mais beleza e mais cuidado.\nAqui, tudo se transforma, a começar pela nossa casa.",
+   "clis": []
   }
  ],
  "equipe": [
