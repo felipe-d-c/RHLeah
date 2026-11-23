@@ -98,7 +98,7 @@ section>h2{margin:0;font:900 22px/1.2 'Playfair Display',Georgia,serif;text-tran
 .lk{display:inline-block;margin-top:8px;font:800 13px Nunito,system-ui,sans-serif;color:var(--blue);letter-spacing:.05em;text-transform:uppercase}
 .foto{width:100%;aspect-ratio:16/10;object-fit:cover;display:block;border:1px solid var(--rule)}
 .vid{width:100%;aspect-ratio:16/9;border:0;display:block;background:#000}
-video.vid{max-height:80vh;object-fit:contain}
+video.vid{aspect-ratio:auto;height:auto;max-height:80vh;object-fit:contain}
 .nvh{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
 .ph{display:grid;place-items:center;aspect-ratio:16/10;background:repeating-linear-gradient(45deg,var(--paper2),var(--paper2) 8px,transparent 8px,transparent 16px);border:1px dashed var(--gold);color:var(--goldd);font:italic 700 17px 'Playfair Display',Georgia,serif;text-align:center;padding:10px}
 .quote{border-top:3px double var(--rule);border-bottom:3px double var(--rule);padding:16px 6px;font:italic 700 24px/1.3 'Playfair Display',Georgia,serif;text-align:center;margin:0 0 16px}
@@ -354,7 +354,7 @@ function media(a){var h='';
  if(a.video){var y=String(a.video).match(/(?:youtu\.be\/|v=|embed\/|shorts\/)([\w-]{11})/);
   if(y)h+='<iframe class="vid" src="https://www.youtube.com/embed/'+y[1]+'" title="Vídeo" loading="lazy" allowfullscreen></iframe>';
   else if(/\.(mp4|webm|mov)$/i.test(a.video))h+='<video class="vid" controls preload="metadata" playsinline src="'+esc(a.video)+'"></video>'}
- if(a.foto)h+='<div class="zm"><img class="foto'+(a.retrato?' port':'')+'" loading="lazy" src="'+esc(a.foto)+'" alt="'+esc(a.tit)+'"></div>';return h}
+ if(a.foto&&!(a.video&&h))h+='<div class="zm"><img class="foto'+(a.retrato?' port':'')+'" loading="lazy" src="'+esc(a.foto)+'" alt="'+esc(a.tit)+'"></div>';return h}
 function card(a){
  var n=a.data?nd(a.data):null,nw=a.criado&&Date.now()-a.criado<2592e5,m=[],md=media(a);
  if(a.data)m.push(wk(a.data)+', '+br(a.data));if(a.hora)m.push(a.hora);if(a.local)m.push(a.local);
