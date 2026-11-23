@@ -340,16 +340,17 @@
    "sub": "Novidade",
    "tit": "Treze Tílias está se transformando",
    "txt": "A nossa unidade de Treze Tílias está passando por mudanças na estrutura. Estamos em obras para receber você ainda melhor: mais conforto, mais beleza e mais cuidado.\nAqui, tudo se transforma, a começar pela nossa casa.",
-   "clis": []
+   "clis": [],
+   "foto": "fotos/i1795436025b8cd-1795436323.jpg"
   },
   {
-   "id": "i17954363378a1f",
-   "criado": 1795436337729,
-   "area": "nov",
-   "sub": "Novidade",
-   "tit": "Léah Transforma chegou",
-   "txt": "Um espaço para conectar a equipe, compartilhar cultura e desenvolver pessoas. Aqui você encontra comunicados, treinamentos, campanhas, reconhecimentos e muito mais.\nEm breve: fotos e vídeos da nossa equipe.",
-   "video": "videos/i4-1795434238.mp4",
+   "id": "i17954368234712",
+   "criado": 1795436823668,
+   "area": "com",
+   "sub": "Aviso importante",
+   "tit": "Feliz Dia da Biomédica!",
+   "txt": "Neste dia 20 de novembro, celebramos o Dia da Biomédica. Queremos reconhecer e agradecer a cada uma de vocês, peças tão importantes para o sucesso da Léah Estética. Sua dedicação, conhecimento e profissionalismo são essenciais para os resultados que entregamos. Parabéns pelo seu dia e por toda a sua contribuição!",
+   "data": "2026-11-20",
    "clis": []
   }
  ],
