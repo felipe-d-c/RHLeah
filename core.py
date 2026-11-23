@@ -177,6 +177,8 @@ def ordenar(d: dict) -> dict:
 
 
 # ------------------------------------------------------------------ fotos
+VIDEO_MAX_MB = 40  # limite do envio pela API do GitHub (base64 aumenta ~33%)
+
 def reduzir_foto(dados: bytes, lado_max: int = 1600, qualidade: int = 82) -> bytes:
     from PIL import Image, ImageOps
 
@@ -230,7 +232,7 @@ class GitHub:
                      "content": base64.b64encode(conteudo).decode()}
             if sha:
                 corpo["sha"] = sha
-            r = self.s.put(self._url(caminho), json=corpo, timeout=60)
+            r = self.s.put(self._url(caminho), json=corpo, timeout=max(60, len(conteudo) // 100_000))
             if r.status_code in (200, 201):
                 return
             if r.status_code in (409, 422):
@@ -258,7 +260,7 @@ def publicar(dados: dict, fotos_novas: dict[str, bytes], gh: GitHub | None, msg:
         (BASE / "dados.json").write_bytes(conteudo)
         return "local"
     for caminho, b in fotos_novas.items():  # fotos primeiro, para o site nunca apontar pra foto inexistente
-        gh.gravar(caminho, b, f"{msg} (foto)")
+        gh.gravar(caminho, b, f"{msg} ({'vídeo' if caminho.startswith('videos/') else 'foto'})")
     gh.gravar("dados.json", conteudo, msg)
     return "github"
 

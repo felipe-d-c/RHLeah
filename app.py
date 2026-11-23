@@ -231,6 +231,26 @@ def campos(p, area, it):
     if cfg.get("video"):
         init(f"{p}_video", it.get("video", ""))
         v["video"] = st.text_input("Vídeo (link do YouTube ou .mp4)", key=f"{p}_video")
+        if it.get("video") and str(it["video"]).startswith("videos/"):
+            pend = st.session_state.fotos_novas.get(it["video"])
+            if pend:
+                st.video(pend)
+                st.caption("Vídeo atual (ainda não publicado)")
+            elif SITE_URL:
+                st.video(f"{SITE_URL}/{it['video']}")
+                st.caption("Vídeo atual")
+        varq = st.file_uploader(f"Ou envie o arquivo de vídeo (MP4, até {core.VIDEO_MAX_MB} MB, ideal 30 s)",
+                                type=["mp4", "webm"], key=f"{p}_videoarq")
+        if varq is not None:
+            if varq.size > core.VIDEO_MAX_MB * 1024 * 1024:
+                st.error(f"Vídeo com {varq.size / 1048576:.0f} MB. O limite é {core.VIDEO_MAX_MB} MB: "
+                         "reduza a qualidade/resolução (veja a dica abaixo) e envie de novo.")
+                varq = None
+            else:
+                st.video(varq.getvalue())
+        v["_videoarq"] = varq
+        st.caption("Dica: vídeo de celular costuma ser pesado. Grave em 1080p ou use um compressor "
+                   "(ex.: HandBrake, ou o próprio WhatsApp Web baixando o vídeo recebido).")
     if cfg.get("imp"):
         init(f"{p}_imp", bool(it.get("imp")))
         v["imp"] = st.checkbox("Marcar como “Você precisa saber!”", key=f"{p}_imp")
@@ -276,6 +296,12 @@ def aplicar(item, v, arq, area):
             item["retrato"] = True
         else:
             item.pop("retrato", None)
+    varq = v.get("_videoarq")
+    if varq is not None:
+        ext = "webm" if varq.name.lower().endswith(".webm") else "mp4"
+        caminho = f"videos/{item['id']}-{int(time.time())}.{ext}"
+        st.session_state.fotos_novas[caminho] = varq.getvalue()
+        item["video"] = caminho
     if area == "desafio":  # um desafio por mês
         st.session_state.dados["itens"] = [
             i for i in st.session_state.dados["itens"]
